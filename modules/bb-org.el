@@ -1,11 +1,6 @@
 (use-package org-ref
   :ensure t)
 
-(setq org-agenda-custom-commands
-      '(("c" "Simple agenda view"
-         ((agenda "")
-          (alltodo "")))))
-
 ;;;; my conf ;;;;
 (setq org-latex-inputenc-alist '(("utf8" . "utf8x")))
 (setq reftex-default-bibliography '("~/Dropbox/bibliography/references.bib"))

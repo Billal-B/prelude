@@ -7,6 +7,9 @@
 (global-set-key (kbd "C-z") 'evil-force-normal-state)
 (global-set-key (kbd "<escape>") 'evil-force-normal-state)
 
+(define-key evil-normal-state-map (kbd "q") 'nil)
+(define-key evil-normal-state-map (kbd "Q") 'evil-record-macro)
+
 ;; leader bindings
 (use-package evil-leader
   :config
@@ -25,7 +28,6 @@
 (evil-set-initial-state 'magit-mode 'emacs)
 (evil-set-initial-state 'help-mode 'emacs)
 ;;(defalias 'evil-insert-state 'evil-emacs-state)
-
 ;; others
 (global-evil-visualstar-mode)
 

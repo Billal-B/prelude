@@ -72,9 +72,6 @@
   (interactive)
   (evil-yank (point) (point-at-eol)))
 
-(define-key evil-normal-state-map
-  (kbd "Y") 'prelude-yank-to-end-of-line)
-
 (defun prelude-shift-left-visual ()
   "Shift left and restore visual selection."
   (interactive)
