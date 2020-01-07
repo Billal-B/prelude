@@ -23,10 +23,10 @@
 (global-evil-leader-mode)
 
 ;; force emacs state
-;;(setq evil-default-state 'emacs)
+(setq evil-default-state 'insert)
 (evil-set-initial-state 'term-mode 'emacs)
-(evil-set-initial-state 'magit-mode 'emacs)
-(evil-set-initial-state 'help-mode 'emacs)
+;;(evil-set-initial-state 'magit-mode 'emacs)
+;;(evil-set-initial-state 'help-mode 'emacs)
 ;;(defalias 'evil-insert-state 'evil-emacs-state)
 ;; others
 (global-evil-visualstar-mode)

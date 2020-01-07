@@ -24,7 +24,8 @@
 (progn
   ;; define a prefix keymap
   (define-prefix-command 'bb-mod-key-map)
-  (define-key bb-mod-key-map "c" 'bb/tear-off-window)
+  (define-key bb-mod-key-map "c" 'org-capture)
+  (define-key bb-mod-key-map "C" 'bb/tear-off-window)
   (define-key bb-mod-key-map "b" 'helm-buffers-list)
   (define-key bb-mod-key-map "!" 'ansi-term)
   (define-key bb-mod-key-map (kbd "<SPC>") 'helm-all-mark-rings)

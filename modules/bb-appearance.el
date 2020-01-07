@@ -26,6 +26,6 @@
 (use-package ewal-spacemacs-themes
   :ensure t)
 ;;(load-theme 'dracula)
-(load-theme 'leuven)
+(load-theme 'spacemacs-light)
 
 (provide 'bb-appearance)

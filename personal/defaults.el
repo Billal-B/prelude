@@ -19,4 +19,6 @@
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
+(setq prelude-guru nil)
+(advice-add #'smartparens-mode :before-until (lambda (&rest args) t)) ;; disable smartparens
 (server-start)
