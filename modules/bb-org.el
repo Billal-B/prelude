@@ -11,7 +11,7 @@
 ;;       org-agenda-start-on-weekday nil
 ;;       org-agenda-start-day "-3d")
 ;;
-(setq org-agenda-files '("~/.emacs.d/org-files/"))
+(setq org-agenda-files '("~/org-files/"))
 ;;
 ;;
 ;; ;; org-ref + write paper etc
@@ -72,17 +72,13 @@
                                   (:name "Waiting"
                                          :todo "WAIT"))))
 
-(let ((org-super-agenda-groups
-       '((:auto-group t))))
-  (org-agenda-list))
-
 ;; capture templates
 (setq org-capture-templates
-      '(("t" "Todo (ADYL)" entry (file+headline "~/.emacs.d/org-files/agenda-adyl.org" "ADYL")
+      '(("t" "Todo (ADYL)" entry (file+headline "~/org-files/agenda-adyl.org" "ADYL")
          "* TODO %?\n  %U\n")
-        ("T" "Todo" entry (file+headline "~/.emacs.d/org-files/agenda.org" "Others")
+        ("T" "Todo" entry (file+headline "~/org-files/agenda.org" "Others")
          "* TODO %?\n  %U\n")
-        ("a" "Agenda" entry (file+datetree "~/.emacs.d/org-files/agenda.org" "Agenda ADYL")
+        ("a" "Agenda" entry (file+datetree "~/org-files/agenda.org" "Agenda ADYL")
          "* %?\nEntered on %U\n")))
 (setq org-agenda-skip-scheduled-if-done t
       org-agenda-skip-deadline-if-done t
