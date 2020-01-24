@@ -1,4 +1,4 @@
-(use-package 'robe
+(use-package robe
   :config
   (add-hook 'ruby-mode-hook 'robe-mode)
   (eval-after-load 'company

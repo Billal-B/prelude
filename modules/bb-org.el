@@ -72,6 +72,10 @@
                                   (:name "Waiting"
                                          :todo "WAIT"))))
 
+<<<<<<< 093f93a70bd73b5ece4bcdc0775d1796cdd26299
+=======
+
+>>>>>>> fixes ruby conf plus calendar auto startup
 ;; capture templates
 (setq org-capture-templates
       '(("t" "Todo (ADYL)" entry (file+headline "~/org-files/agenda-adyl.org" "ADYL")

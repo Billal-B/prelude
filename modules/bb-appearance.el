@@ -26,5 +26,9 @@
 (use-package ewal-spacemacs-themes
   :ensure t)
 ;;(load-theme 'dracula)
+<<<<<<< 093f93a70bd73b5ece4bcdc0775d1796cdd26299
+=======
+;;(load-theme 'doom-laserwave)
+>>>>>>> fixes ruby conf plus calendar auto startup
 
 (provide 'bb-appearance)

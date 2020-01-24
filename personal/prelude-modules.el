@@ -47,3 +47,4 @@
 (require 'bb-term)
 (require 'bb-evil)
 (require 'bb-python)
+(require 'bb-ruby)
