@@ -39,7 +39,6 @@
   (define-key bb-mod-key-map "+" 'calc)
   (define-key bb-mod-key-map "l" 'helm-locate)
   (define-key bb-mod-key-map "g" 'helm-do-grep-ag)
-                                        ;(define-key bb-mod-key-map "t" 'helm-semantic-or-imenu)
   (define-key bb-mod-key-map "t" 'treemacs)
   (define-key bb-mod-key-map "n" 'deft-new-file)
   (define-key bb-mod-key-map "o" 'helm-occur)
