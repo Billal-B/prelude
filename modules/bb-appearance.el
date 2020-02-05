@@ -3,6 +3,7 @@
   :config
   (centaur-tabs-mode t)
   (setq centaur-tabs-set-icons t)
+  (centaur-tabs-group-by-projectile-project)
   ;;(centaur-tabs-inherit-tabbar-faces)
   :bind
   ("C-<prior>" . centaur-tabs-forward)
@@ -21,7 +22,6 @@
   :config
   (add-hook 'elisp-mode-hook #'rainbow-delimiters-mode)
   :ensure t)
-
 
 (use-package ewal-spacemacs-themes
   :ensure t)

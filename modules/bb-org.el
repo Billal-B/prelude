@@ -82,7 +82,7 @@
          "* TODO %?\n  %U\n")
         ("T" "Todo" entry (file+headline "~/org-files/agenda.org" "Others")
          "* TODO %?\n  %U\n")
-        ("a" "Agenda" entry (file+datetree "~/org-files/agenda.org" "Agenda ADYL")
+        ("a" "Agenda" entry (file+datetree "~/org-files/agenda-adyl.org" "Agenda")
          "* %?\nEntered on %U\n")))
 (setq org-agenda-skip-scheduled-if-done t
       org-agenda-skip-deadline-if-done t
