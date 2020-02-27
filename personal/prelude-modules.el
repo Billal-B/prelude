@@ -48,3 +48,4 @@
 (require 'bb-evil)
 (require 'bb-python)
 (require 'bb-ruby)
+(require 'bb-io)

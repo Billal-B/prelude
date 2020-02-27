@@ -49,5 +49,6 @@
 (define-key term-mode-map (kbd "S-<SPC>") 'jnm/term-toggle-mode)
 (define-key term-raw-map (kbd "S-<SPC>") 'jnm/term-toggle-mode)
 
+(defalias 'term 'multi-term)
 
 (provide 'bb-term)
