@@ -1,4 +1,8 @@
 ((docker nil)
+ (docker-container-diff nil)
+ (docker-container-help nil)
+ (docker-container-kill nil)
+ (docker-container-shells nil)
  (docker-image-help nil)
  (docker-image-inspect nil)
  (docker-image-run
@@ -15,7 +19,8 @@
  (magit-pull nil
              ("--rebase"))
  (magit-push nil
-             ("--force-with-lease"))
+             ("--force-with-lease")
+             ("--force"))
  (magit-rebase nil)
  (magit-reset nil)
  (magit-stash nil))

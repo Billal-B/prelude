@@ -3,7 +3,6 @@
   :requires hydra helm helm-lsp
   :ensure t)
 
-(add-hook 'python-mode-hook #'lsp)
 
 (setq netrom--general-lsp-hydra-heads
       '(;; Xref

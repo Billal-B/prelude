@@ -37,6 +37,7 @@
   (define-key bb-mod-key-map "A" 'org-agenda)
   (define-key bb-mod-key-map "r" 'helm-recentf)
   (define-key bb-mod-key-map "d" 'docker)
+  (define-key bb-mod-key-map "D" 'kubernetes-overview)
   (define-key bb-mod-key-map "+" 'calc)
   (define-key bb-mod-key-map "l" 'helm-locate)
   (define-key bb-mod-key-map "g" 'helm-do-grep-ag)

@@ -9,10 +9,6 @@
 (setq mouse-yank-at-point t)
 (global-hi-lock-mode 1)
 
-;; https://mollermara.com/blog/emacs-sysadmin/
-(require 'dired-x)
-
-
 ;; mouse scroll
 (setq mouse-wheel-scroll-amount '(3 ((shift) . 3))) ;; one line at a time
 (setq mouse-wheel-progressive-speed nil) ;; don't accelerate scrolling
@@ -22,3 +18,6 @@
 (setq prelude-guru nil)
 (advice-add #'smartparens-mode :before-until (lambda (&rest args) t)) ;; disable smartparens
 (server-start)
+
+;; Tell emacs where is your personal elisp lib dir
+(add-to-list 'load-path "~/.emacs.d/lisp/")

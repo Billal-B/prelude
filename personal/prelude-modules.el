@@ -49,3 +49,7 @@
 (require 'bb-python)
 (require 'bb-ruby)
 (require 'bb-io)
+(require 'bb-groovy)
+(require 'bb-sql)
+(require 'bb-dired)
+
