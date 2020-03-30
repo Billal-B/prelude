@@ -9,6 +9,7 @@
 
 (define-key evil-normal-state-map (kbd "q") 'nil)
 (define-key evil-normal-state-map (kbd "Q") 'evil-record-macro)
+(define-key evil-insert-state-map (kbd "C-k") 'windmove-up)
 
 ;; leader bindings
 (use-package evil-leader
@@ -23,7 +24,7 @@
 (global-evil-leader-mode)
 
 ;; force emacs state
-(setq evil-default-state 'insert)
+(setq evil-default-state 'normal)
 (evil-set-initial-state 'term-mode 'emacs)
 ;;(evil-set-initial-state 'magit-mode 'emacs)
 ;;(evil-set-initial-state 'help-mode 'emacs)
@@ -31,9 +32,14 @@
 ;; others
 (global-evil-visualstar-mode)
 
+;; enable M-. in normal mode
+(define-key evil-normal-state-map (kbd "M-.")
+  `(menu-item "" evil-repeat-pop :filter
+              ,(lambda (cmd) (if (eq last-command 'evil-repeat-pop) cmd))))
+
 ;; some colors
-(setq evil-emacs-state-cursor '(bar "red")
-      evil-insert-state-cursor '(bar "salmon")
-      evil-normal-state-cursor '(box "salmon"))
+;;(setq evil-emacs-state-cursor '(bar "red")
+;;      evil-insert-state-cursor '(bar "salmon")
+;;      evil-normal-state-cursor '(box "salmon"))
 
 (provide 'bb-evil)

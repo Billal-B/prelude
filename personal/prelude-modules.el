@@ -39,7 +39,7 @@
 ;;require 'prelude-yaml)
 
 ;;(require 'bb-lsp)
-;;(require 'bb-scala)
+(require 'bb-scala)
 (require 'bb-appearance)
 (require 'bb-org)
 (require 'bb-lsp)
@@ -52,4 +52,3 @@
 (require 'bb-groovy)
 (require 'bb-sql)
 (require 'bb-dired)
-

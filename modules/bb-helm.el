@@ -1,7 +1,7 @@
 ;; open helm in its own frame, see https://www.reddit.com/r/emacs/comments/7rho4f/now_you_can_use_helm_with_frames_instead_of/
-;;(setq helm-display-function 'helm-display-buffer-in-own-frame
-;;      ;helm-display-buffer-reuse-frame t
-;;      helm-use-undecorated-frame-option t)
+;; (setq helm-display-function 'helm-display-buffer-in-own-frame
+;;       ;;helm-display-buffer-reuse-frame t
+;;       helm-use-undecorated-frame-option t)
 
 
 ;; bb bindings

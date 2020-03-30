@@ -1,6 +1,9 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
+(setq use-package-always-defer t
+      use-package-always-ensure t)
+
 (use-package multiple-cursors
   :bind (("C->" . mc/mark-all-dwim)
          ("C-<" . mc/edit-lines))
@@ -40,6 +43,9 @@
 (use-package projectile
   :config
   (projectile-mode +1)
+  ;; allows files to be ignored
+  (setq projectile-enable-caching t)
+  (setq projectile-indexing-method 'hybrid)
   :ensure t)
 
 

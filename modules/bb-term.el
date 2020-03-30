@@ -20,7 +20,6 @@
   (interactive (list my-term-shell)))
 (ad-activate 'ansi-term)
 
-
 ;; fix some utf8 chars
 (defun my-term-use-utf8 ()
   (set-buffer-process-coding-system 'utf-8-unix 'utf-8-unix))
@@ -50,5 +49,27 @@
 (define-key term-raw-map (kbd "S-<SPC>") 'jnm/term-toggle-mode)
 
 (defalias 'term 'multi-term)
+
+;;;;;;;;;;; ESHELL ;;;;;;;;;;;;;
+(use-package virtualenvwrapper
+  :ensure t)
+(use-package eshell-prompt-extras
+  :config
+  (with-eval-after-load "esh-opt"
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
+
+  (with-eval-after-load "esh-opt"
+  (require 'virtualenvwrapper)
+  (venv-initialize-eshell)
+  (autoload 'epe-theme-lambda "eshell-prompt-extras")
+  (setq eshell-highlight-prompt nil
+        eshell-prompt-function 'epe-theme-lambda))
+  :ensure t)
+
+
+(use-package eshell-toggle
+  :ensure t)
 
 (provide 'bb-term)

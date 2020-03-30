@@ -1,3 +1,6 @@
 /elpa
 /savefile
 /.cask
+-/anaconda-mode
+-/elpy
+

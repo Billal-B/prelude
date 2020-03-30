@@ -21,3 +21,8 @@
 
 ;; Tell emacs where is your personal elisp lib dir
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+
+;; disable annoying white space mode
+(setq prelude-whitespace nil)
+
+(load-theme 'doom-ephemeral)
