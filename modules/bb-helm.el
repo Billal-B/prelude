@@ -17,4 +17,7 @@
 (setq helm-allow-mouse t)
 (setq helm-prevent-escaping-from-minibuffer nil)
 (customize-set-variable 'helm-ff-lynx-style-map t) ; allow going up/down dir with helm using arrow keys
+
+(use-package helm-swoop
+  :ensure t)
 (provide 'bb-helm)

@@ -11,23 +11,15 @@
 (define-key evil-normal-state-map (kbd "Q") 'evil-record-macro)
 (define-key evil-insert-state-map (kbd "C-k") 'windmove-up)
 
-;; leader bindings
-(use-package evil-leader
-  :config
-  (evil-leader/set-leader "<SPC>")
-  (evil-leader/set-key
-  "j" 'avy-goto-line-below
-  "k" 'avy-goto-line-above
-  "/" 'avy-isearch
-  "f" 'avy-goto-char-timer)
-  :ensure t)
-(global-evil-leader-mode)
 
 ;; force emacs state
 (setq evil-default-state 'normal)
 (evil-set-initial-state 'term-mode 'emacs)
-;;(evil-set-initial-state 'magit-mode 'emacs)
-;;(evil-set-initial-state 'help-mode 'emacs)
+(evil-set-initial-state 'magit-mode 'emacs)
+(evil-set-initial-state 'help-mode 'emacs)
+(evil-set-initial-state 'xref--xref-buffer-mode 'emacs)
+(evil-set-initial-state 'kubernetes-mode 'emacs)
+(evil-set-initial-state 'flycheck-error-list-mode 'emacs)
 ;;(defalias 'evil-insert-state 'evil-emacs-state)
 ;; others
 (global-evil-visualstar-mode)

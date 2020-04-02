@@ -72,10 +72,6 @@
                                   (:name "Waiting"
                                          :todo "WAIT"))))
 
-<<<<<<< 093f93a70bd73b5ece4bcdc0775d1796cdd26299
-=======
-
->>>>>>> fixes ruby conf plus calendar auto startup
 ;; capture templates
 (setq org-capture-templates
       '(("t" "Todo (ADYL)" entry (file+headline "~/org-files/agenda-adyl.org" "ADYL")
@@ -129,5 +125,12 @@
                                  :order 10)
                           (:discard (:not (:todo "TODO")))))))))))
 
+(use-package org-bullets
+  :config
+  (require 'org-bullets)
+  (setq org-bullets-bullet-list
+      '("◉" "○"))
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+  :ensure t)
 
 (provide 'bb-org)

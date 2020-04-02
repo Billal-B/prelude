@@ -23,12 +23,29 @@
   (add-hook 'elisp-mode-hook #'rainbow-delimiters-mode)
   :ensure t)
 
-(use-package ewal-spacemacs-themes
+;; required for  (setq doom-modeline-github t)
+(use-package ghub
   :ensure t)
-;;(load-theme 'dracula)
-<<<<<<< 093f93a70bd73b5ece4bcdc0775d1796cdd26299
-=======
-;;(load-theme 'doom-laserwave)
->>>>>>> fixes ruby conf plus calendar auto startup
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :config
+  (setq doom-modeline-height 20)
+  (setq doom-modeline-bar-width 3)
+  (setq doom-modeline-icon (display-graphic-p))
+  (setq doom-modeline-major-mode-icon t)
+  (setq doom-modeline-major-mode-color-icon t)
+  (setq doom-modeline-buffer-state-icon nil)
+  (setq doom-modeline-buffer-modification-icon nil)
+  (setq doom-modeline-minor-modes nil)
+  (setq doom-modeline-indent-info nil)
+  (setq doom-modeline-checker-simple-format t)
+  (setq doom-modeline-github t)
+  (setq doom-modeline-github-interval (* 30 60))
+  (setq doom-modeline-persp-name nil)
+  (setq doom-modeline-modal-icon t)
+  (setq doom-modeline-gnus nil))
+
 
 (provide 'bb-appearance)
