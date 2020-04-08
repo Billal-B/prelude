@@ -5,6 +5,7 @@
  (docker-container-shells nil)
  (docker-image-help nil)
  (docker-image-inspect nil)
+ (docker-image-ls nil)
  (docker-image-run
   ("-i" "--rm" "-t"))
  (magit-bisect nil)

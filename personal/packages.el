@@ -6,7 +6,6 @@
 
 (use-package multiple-cursors
   :ensure t)
-(use-package evil-multi)
 
 (use-package hydra
   :ensure t)
@@ -97,8 +96,8 @@
   :ensure t)
 
 ;; treemacs
-(use-package treemacs
-  :ensure t)
+;;(use-package treemacs
+;;  :ensure t)
 
 (use-package deft
   :ensure t)

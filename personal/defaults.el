@@ -22,4 +22,4 @@
 (setq prelude-whitespace nil)
 (whitespace-mode -1)
 (global-whitespace-mode -1)
-(load-theme 'doom-ephemeral)
+(load-theme 'dracula)

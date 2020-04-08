@@ -24,28 +24,39 @@
   :ensure t)
 
 ;; required for  (setq doom-modeline-github t)
-(use-package ghub
-  :ensure t)
+;;(use-package ghub
+;;  :ensure t)
+;;
+;;(use-package doom-modeline
+;;  :ensure t
+;;  :init (doom-modeline-mode 1)
+;;  :config
+;;  (setq doom-modeline-height 20)
+;;  (setq doom-modeline-bar-width 3)
+;;  (setq doom-modeline-icon (display-graphic-p))
+;;  (setq doom-modeline-major-mode-icon t)
+;;  (setq doom-modeline-major-mode-color-icon t)
+;;  (setq doom-modeline-buffer-state-icon nil)
+;;  (setq doom-modeline-buffer-modification-icon nil)
+;;  (setq doom-modeline-minor-modes nil)
+;;  (setq doom-modeline-indent-info nil)
+;;  (setq doom-modeline-checker-simple-format t)
+;;  (setq doom-modeline-github t)
+;;  (setq doom-modeline-github-interval (* 30 60))
+;;  (setq doom-modeline-persp-name nil)
+;;  (setq doom-modeline-modal-icon t)
+;;  (setq doom-modeline-gnus nil))
 
-(use-package doom-modeline
-  :ensure t
-  :init (doom-modeline-mode 1)
-  :config
-  (setq doom-modeline-height 20)
-  (setq doom-modeline-bar-width 3)
-  (setq doom-modeline-icon (display-graphic-p))
-  (setq doom-modeline-major-mode-icon t)
-  (setq doom-modeline-major-mode-color-icon t)
-  (setq doom-modeline-buffer-state-icon nil)
-  (setq doom-modeline-buffer-modification-icon nil)
-  (setq doom-modeline-minor-modes nil)
-  (setq doom-modeline-indent-info nil)
-  (setq doom-modeline-checker-simple-format t)
-  (setq doom-modeline-github t)
-  (setq doom-modeline-github-interval (* 30 60))
-  (setq doom-modeline-persp-name nil)
-  (setq doom-modeline-modal-icon t)
-  (setq doom-modeline-gnus nil))
-
+(use-package    feebleline
+  :ensure       t
+  :config       (setq feebleline-msg-functions
+                      '((feebleline-line-number         :post "" :fmt "%5s")
+                        (feebleline-column-number       :pre ":" :fmt "%-2s")
+                        (feebleline-file-directory      :face feebleline-dir-face :post "")
+                        (feebleline-file-or-buffer-name :face font-lock-keyword-face :post "")
+                        (feebleline-file-modified-star  :face font-lock-warning-face :post "")
+                        (feebleline-git-branch          :face feebleline-git-face :pre " : ")
+                        (feebleline-project-name        :align right)))
+                (feebleline-mode 1))
 
 (provide 'bb-appearance)

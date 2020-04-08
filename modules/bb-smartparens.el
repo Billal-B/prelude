@@ -16,8 +16,10 @@
 ;;  ("S" sp-backward-slurp-sexp "Slurp B" :color blue)
 ;;  ("q" nil "Quit" :color blue))
 ;;;;;;; end of the default conf
-(defhydra hydra-smartparens (:hint nil) 
-  "Moving^^^^                       Slurp & Barf^^   Wrapping^^            Sexp juggling^^^^               Destructive
+
+(defhydra hydra-smartparens (:hint nil)
+  "
+ Moving^^^^                       Slurp & Barf^^   Wrapping^^            Sexp juggling^^^^               Destructive
 ------------------------------------------------------------------------------------------------------------------------
  [_a_] beginning  [_n_] down      [_h_] bw slurp   [_R_]   rewrap        [_S_] split   [_t_] transpose   [_c_] change inner  [_w_] copy
  [_e_] end        [_N_] bw down   [_H_] bw barf    [_u_]   unwrap        [_s_] splice  [_A_] absorb      [_C_] change outer
@@ -66,6 +68,5 @@
 
   ("q" nil)
   ("g" nil))
-
 
 (provide 'bb-smartparens)

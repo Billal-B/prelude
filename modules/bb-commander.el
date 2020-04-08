@@ -6,16 +6,14 @@
   (define-key evil-normal-state-map (kbd "w") nil)
   :ensure t)
 
+(use-package pretty-hydra
+  :ensure t)
 
 (defun eval-and-next-paragraph ()
   (interactive)
   (evil-forward-paragraph)
   (call-interactively #'eval-last-sexp)
   )
-
-(general-define-key
- :states 'normal
- "!" 'eval-and-next-paragraph)
 
 ;; ** Global Keybindings
 (general-define-key
@@ -83,5 +81,11 @@
 (general-define-key
  :keymaps '(normal insert emacs)
  "S-SPC" 'hydra-smartparens/body)
+
+;; lsp bindings
+(general-define-key
+ :states '(normal visual)
+ :keymaps 'lsp-mode-map
+ "SPC SPC" 'hydra-lsp/body)
 
 (provide 'bb-commander)
