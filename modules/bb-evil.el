@@ -16,6 +16,7 @@
 (setq evil-default-state 'normal)
 (evil-set-initial-state 'term-mode 'emacs)
 (evil-set-initial-state 'magit-mode 'emacs)
+(evil-set-initial-state 'dired-mode 'emacs)
 (evil-set-initial-state 'help-mode 'emacs)
 (evil-set-initial-state 'xref--xref-buffer-mode 'emacs)
 (evil-set-initial-state 'kubernetes-mode 'emacs)

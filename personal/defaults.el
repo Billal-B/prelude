@@ -1,4 +1,3 @@
-(set-language-environment "UTF-8")
 (global-visual-line-mode t) ; enable visual line mode (soft wrap) globally
 (show-paren-mode t)
 (electric-pair-mode 1)
@@ -16,13 +15,11 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
 (setq prelude-guru nil)
-(advice-add #'smartparens-mode :before-until (lambda (&rest args) t)) ;; disable smartparens
-(server-start)
 
-;; Tell emacs where is your personal elisp lib dir
-(add-to-list 'load-path "~/.emacs.d/lisp/")
+;;(advice-add #'smartparens-mode :before-until (lambda (&rest args) t)) ;; disable smartparens
 
 ;; disable annoying white space mode
 (setq prelude-whitespace nil)
-
+(whitespace-mode -1)
+(global-whitespace-mode -1)
 (load-theme 'doom-ephemeral)

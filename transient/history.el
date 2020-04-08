@@ -17,8 +17,9 @@
  (magit-log
   ("-n256" "--graph" "--decorate"))
  (magit-merge nil)
- (magit-pull nil
-             ("--rebase"))
+ (magit-pull
+  ("--rebase")
+  nil)
  (magit-push nil
              ("--force-with-lease")
              ("--force"))

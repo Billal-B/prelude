@@ -6545,7 +6545,9 @@ When called from Lisp, DETAILS is passed to `diredp-mark-files-regexp-recursive'
          (unmark   (and numarg  (>= numarg 0)))
          (ignorep  (and numarg  (<= numarg 0))))
     (or (listp extension)  (setq extension  (list extension)))
-    (diredp-mark-files-regexp-recursive (concat ".+[.]\\("
+    (diredp-mark-files-regexp-recursive (concat ".+[.]\\("v = os.getenv(key.upper())
+            if v is not None:
+                return v
                                                 (mapconcat #'regexp-quote extension "\\|")
                                                 "\\)$")
                                         (if unmark ?\040 dired-marker-char)

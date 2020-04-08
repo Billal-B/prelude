@@ -5,9 +5,8 @@
       use-package-always-ensure t)
 
 (use-package multiple-cursors
-  :bind (("C->" . mc/mark-all-dwim)
-         ("C-<" . mc/edit-lines))
   :ensure t)
+(use-package evil-multi)
 
 (use-package hydra
   :ensure t)

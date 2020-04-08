@@ -19,47 +19,50 @@
 
 ;; ** Global Keybindings
 (general-define-key
-  :keymaps '(normal insert emacs)
-  :prefix "SPC"
-  :non-normal-prefix "<f12>"
-  :keymaps 'override
-  "e" '(:ignore t :which-key "Edits")
-  "eu" 'undo-tree-visualize
-  "ee" 'helm-show-kill-ring
-  "f" '(:ignore t :which-key "Files")
-  "fr" 'helm-recentf
-  "ff" 'helm-find-files
-  "fd" 'dired-jump
-  "fl" 'helm-locate
-  "ft" 'treemacs
-  "fn" 'deft
-  "fN" 'deft-new-file
-  "fs" 'crux-create-scratch-buffer
-  "o" '(:ignore t :which-key "Search (occur/ag)")
-  "oa" 'helm-do-ag
-  "og" 'helm-do-grep-ag
-  "oo" 'helm-occur
-  "oO" 'helm-swoop
-  "oM" 'helm-multi-swoop
-  "om" 'helm-multi-swoop-all
-  "t" '(:ignore t :which-key "Tools")
-  "tt" 'terminal-here
-  "td" 'docker
-  "tm" 'magit-status
-  "tg" 'thunar
-  "tk" 'kubernetes-overview
-  "t+" 'calc
-  "w" '(:ignore t :which-key "Window")
-  "ww" 'bb/tear-off-window
-  "wm" 'menu-bar-mode
-  ;; others
-  "a" 'org-capture
-  "A" 'org-agenda
-  "M-x" 'helm-M-x ; useful in cases of bugs
-  "p" 'projectile-command-map
-  "b" 'helm-buffers-list
-  "RET" 'helm-resume
-  )
+ :keymaps '(normal visual insert emacs)
+ :prefix "SPC"
+ :non-normal-prefix "<f12>"
+ :keymaps 'override
+ "e" '(:ignore t :which-key "Edits")
+ "ee" 'helm-show-kill-ring
+ "eu" 'undo-tree-visualize
+ "f" '(:ignore t :which-key "Files")
+ "fd" 'dired-jump
+ "ff" 'helm-find-files
+ "fg" 'thunar
+ "fl" 'helm-locate
+ "fn" 'deft
+ "fN" 'deft-new-file
+ "fr" 'helm-recentf
+ "fs" 'crux-create-scratch-buffer
+ "ft" 'treemacs
+ "o" '(:ignore t :which-key "Search (occur/ag)")
+ "oa" 'helm-do-ag
+ "og" 'helm-do-grep-ag
+ "om" 'helm-multi-swoop-all
+ "oM" 'helm-multi-swoop
+ "oo" 'helm-occur
+ "oO" 'helm-swoop
+ "t" '(:ignore t :which-key "Tools")
+ "td" 'docker
+ "tk" 'kubernetes-overview
+ "tm" 'magit-status
+ "tt" 'terminal-here
+ "t+" 'calc
+ "w" '(:ignore t :which-key "Window")
+ "wm" 'menu-bar-mode
+ "ww" 'bb/tear-off-window
+ "<" '(:ignore t :which-key "Multiedit")
+ "<<" 'evil-multiedit-toggle-marker-here
+ "<a" 'evil-multiedit-match-all
+ ;; others
+ "a" 'org-capture
+ "A" 'org-agenda
+ "b" 'helm-buffers-list
+ "p" 'projectile-command-map
+ "RET" 'helm-resume
+ "M-x" 'helm-M-x ; useful in cases of bugs
+ )
 
 ;; visual mode bindings
 (general-define-key
@@ -75,5 +78,10 @@
  "tk" 'avy-goto-line-above
  "tw" 'avy-goto-word-1
  "tn" 'avy-isearch)
+
+;; smartparens bindings
+(general-define-key
+ :keymaps '(normal insert emacs)
+ "S-SPC" 'hydra-smartparens/body)
 
 (provide 'bb-commander)

@@ -1,3 +1,5 @@
+(require 'bb-func)
+
 (global-set-key [mouse-3] 'mouse-popup-menubar-stuff)
 (global-set-key (kbd "C-<mouse-5>") 'text-scale-decrease)
 (global-set-key (kbd "C-<mouse-4>") 'text-scale-increase)
@@ -8,7 +10,7 @@
 (global-set-key (kbd "C-l") 'windmove-right)
 (global-set-key (kbd "C-k") 'windmove-up)
 (global-set-key (kbd "M-,") 'kill-buffer-and-window)
-(global-set-key (kbd "C-!") 'eshell-toggle)
+(global-set-key (kbd "C-!") 'bb-eshell-projectile-here)
 (global-set-key (kbd "C-:") 'company-complete)
 (global-set-key (kbd "C-<tab>") 'buffer-expose-project)
 (global-set-key (kbd "C-M-<left>") 'winner-undo)
