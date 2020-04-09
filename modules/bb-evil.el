@@ -26,6 +26,7 @@
 (evil-set-initial-state 'xref--xref-buffer-mode 'emacs)
 (evil-set-initial-state 'kubernetes-mode 'emacs)
 (evil-set-initial-state 'flycheck-error-list-mode 'emacs)
+(evil-set-initial-state 'text-mode 'insert)
 ;;(defalias 'evil-insert-state 'evil-emacs-state)
 ;; others
 (global-evil-visualstar-mode)

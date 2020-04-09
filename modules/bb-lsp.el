@@ -60,24 +60,33 @@
   ;; Posframe is a pop-up tool that must be manually installed for dap-mode
   :ensure t)
 
-
 (use-package dap-mode
-  :hook
-  (lsp-mode . dap-mode)
-  (lsp-mode . dap-ui-mode)
+  :functions dap-hydra/nil
+  :diminish
   :config
   ;; enables mouse hover support
   (dap-tooltip-mode 1)
   ;; use tooltips for mouse hover
   ;; if it is not enabled `dap-mode' will use the minibuffer.
   (tooltip-mode 1)
-  ;; displays floating panel with debug buttons
-  ;; requies emacs 26+
-  (dap-ui-controls-mode 1)
-  (add-hook 'dap-stopped-hook
-            (lambda (arg) (call-interactively #'dap-hydra)))
-  :ensure t)
+  :bind (:map lsp-mode-map
+              ("<f5>" . dap-debug)
+              ("M-<f5>" . dap-hydra))
+  :hook ((after-init . dap-mode)
+         (dap-mode . dap-ui-mode)
+         (dap-session-created . (lambda (_args) (dap-hydra)))
+         (dap-stopped . (lambda (_args) (dap-hydra)))
+         (dap-terminated . (lambda (_args) (dap-hydra/nil)))
 
+         (python-mode . (lambda () (require 'dap-python)))
+         (ruby-mode . (lambda () (require 'dap-ruby)))
+         (go-mode . (lambda () (require 'dap-go)))
+         (java-mode . (lambda () (require 'dap-java)))
+         ((c-mode c++-mode objc-mode swift-mode) . (lambda () (require 'dap-lldb)))
+         (php-mode . (lambda () (require 'dap-php)))
+         (elixir-mode . (lambda () (require 'dap-elixir)))
+         ((js-mode js2-mode) . (lambda () (require 'dap-chrome)))
+         (powershell-mode . (lambda () (require 'dap-pwsh)))))
 
 
 (defhydra hydra-lsp (:exit t :hint nil)

@@ -9,18 +9,15 @@
 (use-package pretty-hydra
   :ensure t)
 
-(defun eval-and-next-paragraph ()
-  (interactive)
-  (evil-forward-paragraph)
-  (call-interactively #'eval-last-sexp)
-  )
+(general-create-definer leader-def
+  ;; :prefix my-leader
+  :keymaps '(normal visual insert emacs)
+  :prefix "SPC"
+  :non-normal-prefix "<f12>"
+  :prefix "SPC")
 
 ;; ** Global Keybindings
-(general-define-key
- :keymaps '(normal visual insert emacs)
- :prefix "SPC"
- :non-normal-prefix "<f12>"
- :keymaps 'override
+(leader-def
  "e" '(:ignore t :which-key "Edits")
  "ee" 'helm-show-kill-ring
  "eu" 'undo-tree-visualize
@@ -82,10 +79,11 @@
  :keymaps '(normal insert emacs)
  "S-SPC" 'hydra-smartparens/body)
 
-;; lsp bindings
+;; python bindings
 (general-define-key
  :states '(normal visual)
- :keymaps 'lsp-mode-map
- "SPC SPC" 'hydra-lsp/body)
+ :keymaps 'python-mode-map
+ "SPC SPC" 'hydra-lsp/body
+ "SPC w" 'pyvenv-workon)
 
 (provide 'bb-commander)
