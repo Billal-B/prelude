@@ -23,7 +23,7 @@
   (add-hook 'elisp-mode-hook #'rainbow-delimiters-mode)
   :ensure t)
 
-;; required for  (setq doom-modeline-github t)
+;; required for doom-modeline
 (use-package ghub
   :ensure t)
 
@@ -58,5 +58,8 @@
 ;;                         (feebleline-git-branch          :face feebleline-git-face :pre " : ")
 ;;                         (feebleline-project-name        :align right)))
 ;;                 (feebleline-mode 1))
+(setq-default cursor-type 'bar) 
+
+(load-theme 'doom-one t)
 
 (provide 'bb-appearance)

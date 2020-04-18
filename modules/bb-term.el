@@ -68,8 +68,15 @@
         eshell-prompt-function 'epe-theme-lambda))
   :ensure t)
 
-
 (use-package eshell-toggle
   :ensure t)
+
+;; see : https://www.masteringemacs.org/article/complete-guide-mastering-eshell
+;; TODO not working
+;; (require 'eshell)
+;; (require 'em-smart)
+;; (setq eshell-where-to-jump 'begin)
+;; (setq eshell-review-quick-commands nil)
+;; (setq eshell-smart-space-goes-to-end t)
 
 (provide 'bb-term)

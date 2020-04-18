@@ -3,7 +3,7 @@
 
 (require 'smartparens-config)
 
-(smartparens-global-mode t)
+(smartparens-global-mode nil)
 ;;;;; default conf of the author
 ;;(defhydra smartparens-hydra (global-map "S-<SPC>")
 ;;  "Smartparens"

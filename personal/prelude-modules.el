@@ -6,7 +6,7 @@
 (require 'prelude-helm-everywhere) ;; Enable Helm everywhere
 (require 'prelude-company)
 ;; (require 'prelude-key-chord) ;; Binds useful features to key combinations
-(require 'prelude-evil)
+;; (require 'prelude-evil)
 
 ;;; Programming languages support
 (require 'prelude-c)
@@ -32,25 +32,31 @@
 ;; (require 'prelude-scala)
 (require 'prelude-scheme)
 (require 'prelude-shell)
-;; (require 'prelude-scss)
+; (require 'prelude-scss)
 ;; (require 'prelude-ts)
 ;; (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
 ;;require 'prelude-yaml)
 
-(require 'bb-lsp)
-(require 'bb-scala)
-(require 'bb-appearance)
-(require 'bb-org)
-(require 'bb-lsp)
-(require 'bb-helm)
-(require 'bb-term)
-(require 'bb-evil)
+;; LANG
+(require 'bb-clojure)
+(require 'bb-groovy)
+(require 'bb-io)
 (require 'bb-python)
 (require 'bb-ruby)
-(require 'bb-io)
-(require 'bb-groovy)
+(require 'bb-scala)
 (require 'bb-sql)
-(require 'bb-smartparens)
-(require 'bb-commander)
+;; OTHERS
+(require 'bb-company)
 ;;(require 'bb-dired)
+(require 'bb-evil)
+(require 'bb-helm) ;; must be disabled if prelude-helm is not enabled
+;;(require 'bb-ivy)
+;;(require 'bb-lsp)
+(require 'bb-org)
+(require 'bb-term)
+(require 'bb-smartparens)
+(require 'bb-appearance)
+(require 'bb-func)
+;; must be loaded last
+(require 'bb-commander)

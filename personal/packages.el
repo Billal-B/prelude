@@ -111,6 +111,12 @@
   (require 'vlf-setup)
   :ensure t)
 
+;; allows creating child frame
+(use-package posframe
+  :config
+  (setq posframe-mouse-banish nil)
+  :ensure t)
+
 ;; others
 (beacon-mode 0)
 (super-save-mode 1)

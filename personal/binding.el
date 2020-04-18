@@ -1,5 +1,3 @@
-(require 'bb-func)
-
 (global-set-key [mouse-3] 'mouse-popup-menubar-stuff)
 (global-set-key (kbd "C-<mouse-5>") 'text-scale-decrease)
 (global-set-key (kbd "C-<mouse-4>") 'text-scale-increase)
@@ -11,9 +9,9 @@
 (global-set-key (kbd "C-k") 'windmove-up)
 (global-set-key (kbd "M-,") 'kill-buffer-and-window)
 (global-set-key (kbd "C-!") 'bb-eshell-projectile-here)
-(global-set-key (kbd "C-:") 'company-complete)
-(global-set-key (kbd "C-<tab>") 'buffer-expose-project)
+(global-set-key (kbd "C-:") 'counsel-company)
+(global-set-key (kbd "C-<tab>") 'bb-ivy-switch-buffer)
 (global-set-key (kbd "C-M-<left>") 'winner-undo)
 (global-set-key (kbd "C-M-<right>") 'winner-redo)
-(global-set-key (kbd "M-=") 'er/contract-region)
 (global-set-key (kbd "C-S-f") 'helm-projectile-ag)
+

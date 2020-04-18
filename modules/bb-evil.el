@@ -1,3 +1,5 @@
+(require 'evil)
+
 ;; evil bindings
 (global-set-key (kbd "M-h") 'evil-window-move-far-left)
 (global-set-key (kbd "M-j") 'evil-window-move-very-bottom)
@@ -12,8 +14,8 @@
 (define-key evil-insert-state-map (kbd "C-k") 'windmove-up)
 
 
-;; force emacs state
-(setq evil-default-state 'normal)
+(setq evil-default-state 'emacs) ; force emacs state
+(evil-set-initial-state 'edebug-mode 'emacs)
 (evil-set-initial-state 'term-mode 'emacs)
 (evil-set-initial-state 'magit-mode 'emacs)
 (evil-set-initial-state 'dired-mode 'emacs)
@@ -27,6 +29,8 @@
 (evil-set-initial-state 'kubernetes-mode 'emacs)
 (evil-set-initial-state 'flycheck-error-list-mode 'emacs)
 (evil-set-initial-state 'text-mode 'insert)
+;; (evil-set-initial-state 'cider-repl-mode 'emacs)
+;; (evil-set-initial-state 'cider-inspector-mode 'emacs)
 ;;(defalias 'evil-insert-state 'evil-emacs-state)
 ;; others
 (global-evil-visualstar-mode)
@@ -40,5 +44,14 @@
 ;;(setq evil-emacs-state-cursor '(bar "red")
 ;;      evil-insert-state-cursor '(bar "salmon")
 ;;      evil-normal-state-cursor '(box "salmon"))
+
+(setq evil-insert-state-cursor 'hbar)
+(setq evil-emacs-state-cursor 'bar)
+
+(use-package evil-mc
+  :config
+  (require 'evil-mc)
+  (global-evil-mc-mode  1)
+  :ensure t)
 
 (provide 'bb-evil)
