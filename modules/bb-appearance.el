@@ -60,6 +60,6 @@
 ;;                 (feebleline-mode 1))
 (setq-default cursor-type 'bar) 
 
-(load-theme 'doom-one t)
+(load-theme 'doom-dracula t)
 
 (provide 'bb-appearance)

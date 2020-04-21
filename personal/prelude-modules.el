@@ -22,7 +22,7 @@
 (require 'prelude-js)
 ;; (require 'prelude-latex)
 (require 'prelude-lisp)
-(require 'prelude-lsp)
+;; (require 'prelude-lsp)
 ;; (require 'prelude-ocaml)
 (require 'prelude-org) ;; Org-mode helps you keep TODO lists, notes and more
 (require 'prelude-perl)
@@ -37,6 +37,7 @@
 ;; (require 'prelude-web) ;; Emacs mode for web templates
 (require 'prelude-xml)
 ;;require 'prelude-yaml)
+
 
 ;; LANG
 (require 'bb-clojure)
@@ -59,4 +60,14 @@
 (require 'bb-appearance)
 (require 'bb-func)
 ;; must be loaded last
+
+
+;; doom modules
+(require 'doom-modules) ;; must be place before load doom core bc it seems to move use-package cache
+(require 'load-dir)
+(setq load-dir-recursive t)
+(require 'doom-core)
+(load-dir-one "~/.emacs.d.doom/modules/ui/treemacs")
+(load-dir-one "~/.emacs.d.doom/modules/term/eshell")
+
 (require 'bb-commander)

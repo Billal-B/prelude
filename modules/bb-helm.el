@@ -31,4 +31,10 @@
 (use-package helm-company
   :ensure t)
 
+(use-package helm-dash
+  :config
+  ;; FIX https://github.com/dash-docs-el/helm-dash/issues/188
+  (setq dash-docs-use-workaround-for-emacs-bug nil)
+  :ensure t)
+
 (provide 'bb-helm)

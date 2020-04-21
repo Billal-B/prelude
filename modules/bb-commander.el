@@ -87,28 +87,10 @@
   :prefix "<tab>")
 
 (mode-leader python-mode-map
-  "²" 'hydra-lsp/body
+  "<tab>" 'hydra-lsp/body
   "w" 'pyvenv-workon)
 
-;;;; python bindings
-;;(general-define-key
- ;;:states '(normal visual)
- ;;:keymaps 'python-mode-map
- ;;"SPC SPC" 'hydra-lsp/body
- ;;"SPC w" 'pyvenv-workon)
-
-;; cider/clojure bingings
-;;(general-define-key
- ;;:states '(normal visual)
- ;;:keymaps 'cider-mode-map
- ;;"ù" 'cider-test-rerun-test
- ;;"M-ù" 'cider-test-rerun-failed-tests
- ;;"SPC SPC d" 'cider-hydra-doc/body
- ;;"SPC SPC e" 'cider-hydra-eval/body
- ;;"SPC SPC r" 'cider-hydra-repl/body
- ;;"SPC SPC u" 'cider-hydra-test/body
- ;;"SPC SPC T" 'cider-test-rerun-test
- ;;"SPC SPC t" 'cider-test-run-test)
+;; clojure bindings
 (mode-leader cider-mode-map
  "<tab>" 'cider-test-rerun-test
  "d" 'cider-hydra-doc/body
@@ -117,6 +99,12 @@
  "u" 'cider-hydra-test/body
  "T" 'cider-test-rerun-failed-tests
  "t" 'cider-test-run-test)
+(general-define-key
+ :states 'normal
+ :keymaps 'cider-mode-map
+ "!" 'cider-eval-last-sexp
+ "§" 'cider-eval-last-sexp-in-context
+ )
 
 ;; elisp bindins
 (general-define-key

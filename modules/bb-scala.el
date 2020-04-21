@@ -1,5 +1,3 @@
-(require 'bb-lsp)
-
 ;; Enable scala-mode and sbt-mode
 (use-package scala-mode
   :interpreter

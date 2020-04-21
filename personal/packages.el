@@ -95,10 +95,6 @@
 (use-package docker
   :ensure t)
 
-;; treemacs
-;;(use-package treemacs
-;;  :ensure t)
-
 (use-package deft
   :ensure t)
 
