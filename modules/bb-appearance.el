@@ -60,6 +60,10 @@
 ;;                 (feebleline-mode 1))
 (setq-default cursor-type 'bar) 
 
+;; doom
+(setq pos-tip-internal-border-width 6
+      pos-tip-border-width 1)
+
 (load-theme 'doom-dracula t)
 
 (provide 'bb-appearance)

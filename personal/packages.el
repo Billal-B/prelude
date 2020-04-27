@@ -2,13 +2,11 @@
   (package-install 'use-package))
 
 (setq use-package-always-defer t
-      use-package-always-ensure t)
+      use-package-always-ensure nil)
 
-(use-package multiple-cursors
-  :ensure t)
+(use-package multiple-cursors)
 
-(use-package hydra
-  :ensure t)
+(use-package hydra)
 
 (use-package smart-hungry-delete
   :bind ("C-<backspace>" . smart-hungry-delete-backward-char)
@@ -26,17 +24,6 @@
 (use-package ranger
   :bind ("C-x f" . ranger)
   :ensure t)
-
-(use-package dumb-jump
-  :bind ("S-<f5>" . dumb-jump-back)
-  :bind ("M-<f5>" . dumb-jump-go-other-window)
-  :bind ("<f5>" . dumb-jump-go)
-  :config
-  (setq dumb-jump-confirm-jump-to-modified-file nil)
-  (setq -jump-selector 'helm)
-  (setq dumb-jump-force-searcher 'ag)
-  :ensure t)
-
 
 (use-package projectile
   :config
@@ -91,7 +78,6 @@
 (use-package restart-emacs
   :ensure t)
 
-;; docker
 (use-package docker
   :ensure t)
 

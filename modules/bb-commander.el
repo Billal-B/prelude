@@ -6,14 +6,11 @@
   (define-key evil-normal-state-map (kbd "w") nil)
   :ensure t)
 
-(general-create-definer leader-def
+(general-define-key
   ;; :prefix my-leader
-  :keymaps '(normal visual insert emacs)
+  :states '(normal insert emacs)
   :prefix "SPC"
-  :non-normal-prefix "<f12>")
-
-;; ** Global Keybindings
-(leader-def
+  :non-normal-prefix "<f12>"
   "e" '(:ignore t :which-key "Edits")
   "ee" 'helm-show-kill-ring
   "eu" 'undo-tree-visualize

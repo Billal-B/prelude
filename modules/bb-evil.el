@@ -14,7 +14,7 @@
 (define-key evil-insert-state-map (kbd "C-k") 'windmove-up)
 
 
-(setq evil-default-state 'emacs) ; force emacs state
+;;(setq evil-default-state 'emacs) ; force emacs state
 (evil-set-initial-state 'edebug-mode 'emacs)
 (evil-set-initial-state 'term-mode 'emacs)
 (evil-set-initial-state 'magit-mode 'emacs)

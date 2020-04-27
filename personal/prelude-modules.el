@@ -1,7 +1,7 @@
 ; Uncomment the modules you'd like to use and restart Prelude afterwards
 (require 'prelude-erc) ;; Emacs IRC client
 ;;(require 'prelude-ido) ;; Super charges Emacs completion for C-x C-f and more
-;;(require 'prelude-ivy) ;; A mighty modern alternative to ido
+;; (require 'prelude-ivy) ;; A mighty modern alternative to ido
 (require 'prelude-helm) ;; Interface for narrowing and search
 (require 'prelude-helm-everywhere) ;; Enable Helm everywhere
 (require 'prelude-company)
@@ -39,6 +39,7 @@
 ;;require 'prelude-yaml)
 
 
+(require 'doom-core)
 ;; LANG
 (require 'bb-clojure)
 (require 'bb-groovy)
@@ -51,23 +52,12 @@
 (require 'bb-company)
 ;;(require 'bb-dired)
 (require 'bb-evil)
-(require 'bb-helm) ;; must be disabled if prelude-helm is not enabled
-;;(require 'bb-ivy)
+(require 'bb-helm) ; require prelude-helm 
+;;(require 'bb-ivy) ; require prelude-ivy
 ;;(require 'bb-lsp)
 (require 'bb-org)
 (require 'bb-term)
 (require 'bb-smartparens)
 (require 'bb-appearance)
 (require 'bb-func)
-;; must be loaded last
-
-
-;; doom modules
-(require 'doom-modules) ;; must be place before load doom core bc it seems to move use-package cache
-(require 'load-dir)
-(setq load-dir-recursive t)
-(require 'doom-core)
-(load-dir-one "~/.emacs.d.doom/modules/ui/treemacs")
-(load-dir-one "~/.emacs.d.doom/modules/term/eshell")
-
-(require 'bb-commander)
+(require 'bb-commander) ; must be loaded last

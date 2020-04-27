@@ -1,7 +1,7 @@
 ;; open helm in its own frame, see https://www.reddit.com/r/emacs/comments/7rho4f/now_you_can_use_helm_with_frames_instead_of/
-(setq helm-display-function 'helm-display-buffer-in-own-frame
-      helm-display-buffer-reuse-frame nil
-      helm-use-undecorated-frame-option t)
+;; (setq helm-display-function 'helm-display-buffer-in-own-frame
+;;       helm-display-buffer-reuse-frame nil
+;;       helm-use-undecorated-frame-option t)
 
 ;; bb bindings
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action) ; rebind tab to run persistent action
@@ -19,11 +19,11 @@
 
 
 ;; eshell improvements
-(add-hook 'eshell-mode-hook
-          (lambda ()
-            (eshell-cmpl-initialize)
-            (define-key eshell-mode-map [remap eshell-pcomplete] 'helm-esh-pcomplete)
-            (define-key eshell-mode-map (kbd "M-p") 'helm-eshell-history)))
+;; (add-hook 'eshell-mode-hook
+;;           (lambda ()
+;;             (eshell-cmpl-initialize)
+;;             (define-key eshell-mode-map [remap eshell-pcomplete] 'helm-esh-pcomplete)
+;;             (define-key eshell-mode-map (kbd "M-p") 'helm-eshell-history)))
 
 (use-package helm-swoop
   :ensure t)
@@ -36,5 +36,8 @@
   ;; FIX https://github.com/dash-docs-el/helm-dash/issues/188
   (setq dash-docs-use-workaround-for-emacs-bug nil)
   :ensure t)
+
+(require 'helm-treemacs-icons)
+(helm-treemacs-icons-enable)
 
 (provide 'bb-helm)
